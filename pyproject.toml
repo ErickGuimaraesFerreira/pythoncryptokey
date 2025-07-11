@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pythoncryptokey"
+version = "0.1.0"
+authors = [
+  { name="Erick Guimarães Ferreira", email="erickguimaraesferreira@gmail.com" },
+]
+description = "Uma ferramenta simples para gerar chaves de criptografia Fernet."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+keywords = ["crypto", "key", "fernet", "security", "generator"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "cryptography",
+]
+
+[project.urls]
+Homepage = "https://github.com/ErickGuimaraesFerreira/pythoncryptokey"
+Issues = "https://github.com/ErickGuimaraesFerreira/pythoncryptokey/issues"
+
+# Esta seção cria a ferramenta de linha de comando
+[project.scripts]
+py-generate-key = "pythoncryptokey.key_generator:main"
